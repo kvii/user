@@ -11,5 +11,5 @@ type Service struct {
 }
 
 func (s *Service) Hello(ctx context.Context, name string) (string, error) {
-	return "Hello " + name, nil
+	return "Hello, " + name, nil
 }
