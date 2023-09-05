@@ -10,7 +10,9 @@ import (
 
 func main() {
 	s := user.Service{
-		DB: &database.DB{},
+		DB: &database.DB{
+			Source: "user",
+		},
 	}
 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		ctx := r.Context()
